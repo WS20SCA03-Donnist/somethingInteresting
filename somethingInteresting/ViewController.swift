@@ -31,6 +31,7 @@ class ViewController: UIViewController {
 		// Do any additional setup after loading the view.
 		
 		UpdateUI()
+		setNeedsStatusBarAppearanceUpdate();
 		
 	}
 	
@@ -55,9 +56,12 @@ class ViewController: UIViewController {
 		imageView.image = UIImage(named: moonPhases[0][0]);
 		imageLabel.text = moonPhases[0][1];
 		
+		setNeedsStatusBarAppearanceUpdate();
 		
 	}
-	
+	override var preferredStatusBarStyle: UIStatusBarStyle {
+	return .lightContent;
+	}
 }
 
 
